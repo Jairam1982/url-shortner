@@ -13,6 +13,10 @@ class User extends Authenticatable
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
+    const ROLE_SUPERADMIN = 'super_admin';
+    const ROLE_ADMIN = 'admin';
+    const ROLE_MEMBER = 'member';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -45,5 +49,41 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function isSuperAdmin()
+    {
+        return $this->role === self::ROLE_SUPERADMIN;
+    }
+
+    public function isAdmin()
+    {
+        return $this->role === self::ROLE_ADMIN;
+    }
+
+    public function isMember()
+    {
+        return $this->role === self::ROLE_MEMBER;
+    }
+    
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
+
+    public function urls()
+    {
+        return $this->hasMany(Url::class);
+    }
+
+     public function getDashboardRoute()
+    {
+        if ($this->role == self::ROLE_SUPERADMIN) {
+            return 'super-admin-dashboard';
+        } elseif ($this->role == self::ROLE_ADMIN) {
+            return 'admin-dashboard';
+        }
+
+        return 'member-dashboard';
     }
 }

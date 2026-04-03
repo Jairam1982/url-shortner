@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #dce6ec, #e5e7e7);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between; /* pushes left & right apart */
+    align-items: center;
+    background: #2c3e50;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+/* LEFT SIDE */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* space between My App & Dashboard */
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* Dashboard link */
+.header-left a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header-left a:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT SIDE */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Logout button */
+.logout-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    text-decoration: underline;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+}
+
+/* FOOTER */
+.footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+/* LOGIN BOX */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 30px;
+    margin: 60px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #2980b9;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #1f6391;
+}
+
+.invite {
+    padding: 10px;
+    background: #2980b9;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.invite:hover {
+    background: #1f6391;
+}
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* Top buttons */
+.top-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.download-btn {
+    background: #27ae60;
+}
+
+/* Table */
+.url-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.url-table th, .url-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.url-table th {
+    background: #2c3e50;
+    color: #fff;
+    text-align: left;
+}
+
+.url-table tr:hover {
+    background: #f5f5f5;
+}
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* Info Text */
+.pagination-info {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.pagination a, .pagination span {
+    margin: 5px;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.pagination a:hover {
+    background: #2980b9;
+    color: #fff;
+}
+
+.pagination .disabled {
+    color: #aaa;
+    border-color: #eee;
+}
+
+.form-box {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input
+{
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 38px;
+    box-sizing: border-box;
+}
+.form-group select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    height: 38px;
+    box-sizing: border-box;
+}
+
+.form-group select {
+    min-width: 200px; /* wider role dropdown */
+}
+
+.company-name {
+    font-size: medium;
+}
+
+.company-email {
+    font-size: small;
+}
